@@ -1,0 +1,35 @@
+First, the user is asked to enter their name, how many players they want
+at the table and how many chips to start with. Based off of that info players
+are created and added to the table.
+
+We then start playing a game at the table.
+In the table there is a method called playGame() that calls all the other methods
+needed to pay the game. I first create an array called aroundTable. This holds all the
+people who still have money to play poker. Then we deal cards to the people in this
+array. Next we get their odds of winning. This is done by making a call to the pokerAPI
+and then calling a method in Player which determines if the player will play this
+hand based off of their play style. Next we make bets, check or fold.
+Then the flop is laid and we again get odd and make our bet, check or fold.
+Another card is laid down and we get odds and decide to play.
+Finally the last card is laid and we determine the winner. All of the cards that
+belong to people still playing the game are collected and sent to the API.
+After we have a winner, we clean up the table by checking if there are any players with no money left.
+
+We continue to play the game until there is only one person with money. Then the world
+champion winner is displayed and the user is asked if they want to play again.
+
+The screen will display the following:
+Dealer
+User's cards:
+Player's thinking.. (When the player is getting their odds)
+Player's placing bet and then the chips they have left
+or Player's checking..
+or Player's out..
+Board:
+Pot Size:
+... (Repeats until the whole is laid out)
+Calculating winner..
+winner
+
+Then they continue to play if people still have money or the user is asked if they
+want to quit.
